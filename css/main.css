@@ -127,11 +127,11 @@ address {
   }
 }
 
-.testimonials {
+.reviews {
   background-color: var(--primary-white-color);
 }
 
-.testimonials-title {
+.reviews-title {
   margin-bottom: 20px;
   text-align: center;
   font-size: 20px;
@@ -140,7 +140,7 @@ address {
   letter-spacing: 0.03em;
 }
 
-.testimonials-card {
+.reviews-card {
   min-height: 564px;
   padding-top: 20px;
   padding-right: 20px;
@@ -150,15 +150,15 @@ address {
           box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
-.testimonials-card-img {
+.reviews-card-img {
   margin: 0 auto;
 }
 
-.card-img-wrapper {
+.reviews-card-img-wrapper {
   margin-bottom: 20px;
 }
 
-.card-link {
+.reviews-card-link {
   display: block;
   width: 30px;
   height: 30px;
@@ -171,11 +171,11 @@ address {
   fill: #436eab;
 }
 
-.testimonials-text-wrapper {
+.reviews-text-wrapper {
   text-align: center;
 }
 
-.testimonials-card-title {
+.reviews-card-title {
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 800;
@@ -184,7 +184,7 @@ address {
   color: var(--accent-color);
 }
 
-.testimonials-card-subtitle {
+.reviews-card-subtitle {
   margin-bottom: 10px;
   font-size: 12px;
   font-weight: 500;
@@ -193,7 +193,7 @@ address {
   color: var(--second-text-color);
 }
 
-.testimonials-card-text {
+.reviews-card-text {
   text-align: center;
   font-size: 12px;
   font-weight: 500;
@@ -202,7 +202,7 @@ address {
   color: #3d3d3d;
 }
 
-.card-text-link {
+.reviews-text-link {
   font-size: 12px;
   font-weight: 500;
   line-height: 1.666;
