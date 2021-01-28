@@ -1,27 +1,5 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    padding-top: 60px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    padding-top: 80px;
-  }
-
-  font-family: var(--main-font);
-}
-
-.link {
-  text-decoration: none;
-}
-
-.list {
-  list-style: none;
+* {
+  // outline: 1px solid red;
 }
 
 h1,
@@ -35,13 +13,14 @@ p {
 }
 
 ul,
-ol,
-a,
-img,
-button,
-input {
+ol {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -50,6 +29,6 @@ img {
   height: auto;
 }
 
-address {
-  font-style: normal;
+body {
+  font-family: var(--main-page-font);
 }
