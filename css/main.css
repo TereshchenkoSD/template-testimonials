@@ -18,6 +18,7 @@
   --second-text-color: #b9b9b9;
   --accent-color: #ff6b09;
   --main-font: 'Montserrat', sans-serif;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -142,6 +143,7 @@ address {
 
 .reviews-card {
   min-height: 564px;
+  margin-bottom: 20px;
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
@@ -165,10 +167,21 @@ address {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
+  color: var(--primary-text-color);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--time-function);
+          transition-timing-function: var(--time-function);
+}
+
+.reviews-card-link:hover, .reviews-card-link:focus {
+  color: #436eab;
 }
 
 .card-link-icon {
-  fill: #436eab;
+  fill: currentColor;
 }
 
 .reviews-text-wrapper {
@@ -208,5 +221,61 @@ address {
   line-height: 1.666;
   letter-spacing: 0.08em;
   color: var(--accent-color);
+}
+
+.reviews-slider-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slider-img-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 182px;
+}
+
+.reviews-slider-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 54px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--time-function);
+          transition-timing-function: var(--time-function);
+}
+
+.reviews-slider-btn:hover, .reviews-slider-btn:focus {
+  color: var(--accent-color);
+}
+
+.slider-btn-icon {
+  fill: currentColor;
+}
+
+.slider-item:nth-last-child(-n + 4) {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
