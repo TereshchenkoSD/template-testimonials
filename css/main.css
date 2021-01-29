@@ -34,7 +34,11 @@ p {
 }
 
 ul,
-ol {
+ol,
+a,
+img,
+button,
+input {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -96,7 +100,11 @@ body {
 .reviews {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: var(--primary-white-color);
+  background-color: var(--white-color);
+}
+
+.reviews .container {
+  position: relative;
 }
 
 .reviews-title {
@@ -109,7 +117,6 @@ body {
 }
 
 .reviews-card {
-  min-height: 564px;
   margin-bottom: 20px;
   padding-top: 20px;
   padding-right: 20px;
@@ -119,11 +126,34 @@ body {
           box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
-.reviews-card-img {
-  margin: 0 auto;
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .reviews-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 688px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
 }
 
-.reviews-card-img-wrapper {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .reviews-card-img-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .reviews-card-img-wrapper {
+    margin-right: 46px;
+  }
+}
+
+.reviews-card-img {
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -131,20 +161,22 @@ body {
   display: block;
   width: 30px;
   height: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 20px;
+  margin: 0 auto;
   color: var(--primary-text-color);
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
+  -webkit-transition-property: -webkit-transform color;
+  transition-property: -webkit-transform color;
+  transition-property: transform color;
+  transition-property: transform color, -webkit-transform color;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
   -webkit-transition-timing-function: var(--transition-function);
           transition-timing-function: var(--transition-function);
 }
 
 .reviews-card-link:hover, .reviews-card-link:focus {
   color: #436eab;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .reviews-card-icon {
@@ -155,13 +187,27 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .reviews-text-wrapper {
+    max-width: 412px;
+    text-align: left;
+  }
+}
+
 .reviews-card-title {
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 800;
-  line-height: 1.214;
+  line-height: 1.219;
   letter-spacing: 0.08em;
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) and (min-width: 1343px) {
+  .reviews-card-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
 }
 
 .reviews-card-subtitle {
@@ -170,19 +216,25 @@ body {
   font-weight: 500;
   line-height: 1.219;
   letter-spacing: 0.08em;
-  color: var(--second-text-color);
+  color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 768px) and (min-width: 1343px) {
+  .reviews-card-subtitle {
+    margin-bottom: 20px;
+  }
 }
 
 .reviews-card-text {
-  text-align: center;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.666;
   letter-spacing: 0.08em;
-  color: #3d3d3d;
+  color: var(--additional-text-color);
 }
 
 .reviews-text-link {
+  text-decoration: underline;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.666;
@@ -202,6 +254,13 @@ body {
           justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .reviews-slider-set {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .slider-img-set {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,6 +269,34 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 182px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .slider-img-set {
+    width: 558px;
+  }
+}
+
+.slider-item-link {
+  width: 54px;
+  height: 54px;
+}
+
+.slider-item-link:hover .slider-img,
+.slider-item-link:focus .slider-img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.slider-img {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: var(--transition-function);
+          transition-timing-function: var(--transition-function);
 }
 
 .reviews-slider-btn {
@@ -238,11 +325,29 @@ body {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .btn-left {
+    position: absolute;
+    top: 40%;
+    left: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .btn-right {
+    position: absolute;
+    top: 40%;
+    right: 28px;
+  }
+}
+
 .slider-btn-icon {
   fill: currentColor;
 }
 
-.slider-item:nth-last-child(-n + 4) {
-  display: none;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .slider-item:nth-last-child(-n + 4) {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
