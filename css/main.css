@@ -116,6 +116,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .reviews-title {
+    margin-bottom: 30px;
+  }
+}
+
 .reviews-card {
   margin-bottom: 20px;
   padding-top: 20px;
@@ -153,8 +159,13 @@ body {
 }
 
 .reviews-card-img {
-  margin: 0 auto;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .reviews-card-img {
+    margin: 0 auto;
+  }
 }
 
 .reviews-card-link {
@@ -280,6 +291,7 @@ body {
 .slider-item-link {
   width: 54px;
   height: 54px;
+  border-radius: 50%;
 }
 
 .slider-item-link:hover .slider-img,
@@ -313,16 +325,20 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
+  -webkit-transition-property: -webkit-transform color;
+  transition-property: -webkit-transform color;
+  transition-property: transform color;
+  transition-property: transform color, -webkit-transform color;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
   -webkit-transition-timing-function: var(--transition-function);
           transition-timing-function: var(--transition-function);
 }
 
 .reviews-slider-btn:hover, .reviews-slider-btn:focus {
   color: var(--accent-color);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1343px) {
